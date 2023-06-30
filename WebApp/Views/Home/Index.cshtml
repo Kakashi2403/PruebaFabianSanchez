@@ -1,0 +1,51 @@
+﻿@model  IEnumerable<WebApp.Models.EmployeesResponse>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"> Usuarios. </h4>
+                </div>
+                <div class="card-body">
+
+
+
+                    <div style="overflow-x:auto">
+                        <table class="table" id="dataTable" cellspacing="0" width="100%">
+                            <thead style="color:#1e656d">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Employee_name</th>
+                                    <th>Employee_salary</th>
+                                    <th>Employee_age</th>
+                                    <th>Profile_image</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr style="font-size: 12px; ">
+                                        <td>@item.Data.First().Id</td>
+                                        <td>@item.Data.First().Employee_name</td>
+                                        <td>@item.Data.First().Employee_salary</td>
+                                        <td>@item.Data.First().Employee_age</td>
+                                        <td>@item.Data.First().Profile_image</td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
